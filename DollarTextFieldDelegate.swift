@@ -54,6 +54,7 @@ class DollarTextFieldDelegate: NSObject, UITextFieldDelegate {
             let proposedText = formatter.stringFromNumber(dollars)
             // Max allowed: $999,999,999.99 (length is 15)
             println("\n  proposedText: \(proposedText)")
+            // ref: http://stackoverflow.com/questions/24006165/how-do-i-print-the-type-or-class-of-a-variable-in-swift
             println("\n  proposedText Type: \(_stdlib_getDemangledTypeName(proposedText))")
             // force a cast from String? to String
             if let proposedText = proposedText {
