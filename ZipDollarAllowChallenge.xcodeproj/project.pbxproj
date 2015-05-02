@@ -13,6 +13,8 @@
 		33C4071B1AED8B5100BAB058 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C4071A1AED8B5100BAB058 /* Images.xcassets */; };
 		33C4071E1AED8B5100BAB058 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C4071C1AED8B5100BAB058 /* LaunchScreen.xib */; };
 		33C4072A1AED8B5100BAB058 /* ZipDollarAllowChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C407291AED8B5100BAB058 /* ZipDollarAllowChallengeTests.swift */; };
+		33C407351AEDA29C00BAB058 /* ZipTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C407341AEDA29C00BAB058 /* ZipTextFieldDelegate.swift */; };
+		33C407371AEDC47200BAB058 /* DollarTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C407361AEDC47200BAB058 /* DollarTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		33C407231AED8B5100BAB058 /* ZipDollarAllowChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZipDollarAllowChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C407281AED8B5100BAB058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C407291AED8B5100BAB058 /* ZipDollarAllowChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipDollarAllowChallengeTests.swift; sourceTree = "<group>"; };
+		33C407341AEDA29C00BAB058 /* ZipTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipTextFieldDelegate.swift; sourceTree = "<group>"; };
+		33C407361AEDC47200BAB058 /* DollarTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DollarTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				33C407101AED8B5000BAB058 /* ZipDollarAllowChallenge */,
+				33C407331AED8B8900BAB058 /* Text Field Delegates */,
 				33C407261AED8B5100BAB058 /* ZipDollarAllowChallengeTests */,
 				33C4070F1AED8B5000BAB058 /* Products */,
 			);
@@ -110,6 +115,15 @@
 				33C407281AED8B5100BAB058 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33C407331AED8B8900BAB058 /* Text Field Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				33C407341AEDA29C00BAB058 /* ZipTextFieldDelegate.swift */,
+				33C407361AEDC47200BAB058 /* DollarTextFieldDelegate.swift */,
+			);
+			name = "Text Field Delegates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +226,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C407351AEDA29C00BAB058 /* ZipTextFieldDelegate.swift in Sources */,
 				33C407161AED8B5000BAB058 /* ViewController.swift in Sources */,
+				33C407371AEDC47200BAB058 /* DollarTextFieldDelegate.swift in Sources */,
 				33C407141AED8B5000BAB058 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

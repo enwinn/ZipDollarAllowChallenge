@@ -6,20 +6,33 @@
 //  Copyright (c) 2015 Eric N. Winn. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var zipTextField: UITextField!
+    @IBOutlet weak var dollarTextField: UITextField!
+    @IBOutlet weak var allowEditTextField: UITextField!
+    @IBOutlet weak var allowEditSwitch: UISwitch!
+    
+    let zipcodeDelegate = ZipTextFieldDelegate()
+    let dollarDelegate = DollarTextFieldDelegate()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.zipTextField.delegate = zipcodeDelegate
+        self.dollarTextField.delegate = dollarDelegate
+        self.allowEditTextField.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        return allowEditSwitch.on ? true : false
     }
-
+    
 
 }
 

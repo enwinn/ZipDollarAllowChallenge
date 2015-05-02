@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ZipDollarAllowChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,51 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter a 5-digit zipcode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZy-La-ar1">
+                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter a number of pennies" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wWq-Vu-lrj">
+                                <rect key="frame" x="16" y="66" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter anything, if allowed is ON" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0e-yB-Dzn">
+                                <rect key="frame" x="16" y="104" width="492" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Prt-ob-aVc">
+                                <rect key="frame" x="535" y="103" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51764705882352946" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RZy-La-ar1" firstAttribute="trailing" secondItem="wWq-Vu-lrj" secondAttribute="trailing" id="Dfb-FH-LSs"/>
+                            <constraint firstItem="Prt-ob-aVc" firstAttribute="trailing" secondItem="wWq-Vu-lrj" secondAttribute="trailing" id="EKr-81-pSj"/>
+                            <constraint firstItem="wWq-Vu-lrj" firstAttribute="top" secondItem="RZy-La-ar1" secondAttribute="bottom" constant="8" symbolic="YES" id="Fh5-mo-sxX"/>
+                            <constraint firstItem="Prt-ob-aVc" firstAttribute="leading" secondItem="y0e-yB-Dzn" secondAttribute="trailing" constant="27" id="IbA-4V-sOC"/>
+                            <constraint firstItem="RZy-La-ar1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="JnD-XI-Rm4"/>
+                            <constraint firstItem="y0e-yB-Dzn" firstAttribute="bottom" secondItem="Prt-ob-aVc" secondAttribute="bottom" id="NfC-VA-Qyi"/>
+                            <constraint firstItem="RZy-La-ar1" firstAttribute="leading" secondItem="wWq-Vu-lrj" secondAttribute="leading" id="Ntc-6n-bKb"/>
+                            <constraint firstItem="y0e-yB-Dzn" firstAttribute="top" secondItem="wWq-Vu-lrj" secondAttribute="bottom" constant="8" symbolic="YES" id="evg-CG-C1e"/>
+                            <constraint firstItem="wWq-Vu-lrj" firstAttribute="leading" secondItem="y0e-yB-Dzn" secondAttribute="leading" id="iW8-p2-BgX"/>
+                            <constraint firstItem="RZy-La-ar1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="nGy-Zu-Duy"/>
+                            <constraint firstItem="wWq-Vu-lrj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rNC-Bq-JrE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="allowEditSwitch" destination="Prt-ob-aVc" id="DQb-vM-yHh"/>
+                        <outlet property="allowEditTextField" destination="y0e-yB-Dzn" id="Zjb-wm-mPx"/>
+                        <outlet property="dollarTextField" destination="wWq-Vu-lrj" id="aJF-B8-WpP"/>
+                        <outlet property="zipTextField" destination="RZy-La-ar1" id="GF3-g2-I4N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304" y="429"/>
         </scene>
     </scenes>
 </document>
